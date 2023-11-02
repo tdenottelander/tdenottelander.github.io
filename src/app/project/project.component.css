@@ -1,0 +1,23 @@
+.container {
+  height: 16rem;
+  padding: 0.5rem;
+  border: 1px solid #e6e6e6;
+}
+.container h3 {
+  margin: 0;
+  height: 2rem;
+}
+.container p {
+  margin: 0;
+  height: 2rem;
+}
+.container .image-container {
+  height: 10rem;
+  overflow: hidden;
+}
+.container img {
+  object-fit: cover;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=project.component.css.map */

@@ -1,0 +1,11 @@
+h2 {
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+}
+
+/*# sourceMappingURL=projects.component.css.map */

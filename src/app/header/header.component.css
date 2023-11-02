@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  min-width: 100%;
+  background-color: #f5f5f5;
+}
+.header .section {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: center;
+  padding: 2rem;
+  border: 1px solid #e5e5e5;
+}
+.header .section span {
+  margin: 0 1rem;
+}
+
+/*# sourceMappingURL=header.component.css.map */
