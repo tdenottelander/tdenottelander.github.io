@@ -6,7 +6,12 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { ProjectComponent } from './project/project.component';
+import { ProjectCardComponent } from './project-card/project-card.component';
+import { NgIconsModule } from "@ng-icons/core";
+import { faBrandCss3, faBrandHtml5, faBrandLinkedinIn, faBrandGithub } from "@ng-icons/font-awesome/brands";
+import { faSolidArrowRight } from "@ng-icons/font-awesome/solid";
+import { ChipComponent } from './chip/chip.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +19,20 @@ import { ProjectComponent } from './project/project.component';
     HeaderComponent,
     IntroductionComponent,
     ProjectsComponent,
-    ProjectComponent
+    ProjectCardComponent,
+    ChipComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgIconsModule.withIcons({
+      faSolidArrowRight,
+      faBrandHtml5,
+      faBrandCss3,
+      faBrandLinkedinIn,
+      faBrandGithub
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

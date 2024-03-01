@@ -2,11 +2,11 @@ import { Component, Input } from '@angular/core'
 import { Project } from './project.model'
 
 @Component({
-  selector: 'app-project',
-  templateUrl: './project.component.html',
-  styleUrls: ['./project.component.scss']
+  selector: 'project-card',
+  templateUrl: './project-card.component.html',
+  styleUrls: ['./project-card.component.scss']
 })
-export class ProjectComponent {
+export class ProjectCardComponent {
 
   @Input({ required: true }) project!: Project
 

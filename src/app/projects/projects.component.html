@@ -3,5 +3,7 @@
 </h2>
 
 <div class="container">
-  <app-project *ngFor="let project of projects" [project]="project"></app-project>
+  <project-card
+    *ngFor="let project of projects"
+    [project]="project"/>
 </div>

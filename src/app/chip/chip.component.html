@@ -1,0 +1,17 @@
+<a
+  href="{{technology.link}}"
+  target="_blank"
+  (mouseover)="hover = true"
+  (mouseout)="hover = false"
+>
+  <div
+    class="container"
+    [ngStyle]="{
+      'border-color': technology.color,
+      'color': hover ? 'white' : technology.color,
+      'background-color': hover ? technology.color : ''
+    }">
+    <ng-icon name="{{ technology.icon }}"/>
+    <span>{{ technology.name }}</span>
+  </div>
+</a>
