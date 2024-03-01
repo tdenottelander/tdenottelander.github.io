@@ -1,0 +1,33 @@
+<div class="card">
+  <!--  Image of the project-card-->
+  <div class="image-container">
+    <img src="{{ project.image }}" alt="{{ project.name }}" class="image">
+  </div>
+
+  <div class="info-container">
+    <p>
+      <span class="heading">
+        {{ project.name }}
+      </span>
+      <span class="year">
+        {{ project.year }}
+      </span>
+    </p>
+    <p>{{ project.description }}</p>
+
+    <!--  Technologies used in the project -->
+    <div
+      *ngIf="project.technologies?.length"
+      class="technologies-container"
+    >
+      <chip
+        *ngFor="let technology of project.technologies"
+        [technology]="technology"/>
+    </div>
+  </div>
+
+  <!--  Link to the project -->
+  <a href="{{ project.link }}" class="view-project-container">
+    <ng-icon name="faSolidArrowRight" class="icon"/>
+  </a>
+</div>

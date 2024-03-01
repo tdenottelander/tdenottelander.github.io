@@ -17,12 +17,17 @@ font-family: "Roboto", "Helvetica Neue", sans-serif;
 }
 
 :root {
+  /* color variables */
   --white: #ffffff;
   --off-white: #f5f5f5;
+  --light-grey: #888888;
   --grey: #666666;
   --dark-grey: #444444;
-
   --accent: #ffc800;
 
+  /* spacing variables */
   --spacing: 1rem;
+
+  /* breakpoints for responsiveness */
+  --breakpoint: 550px;
 }

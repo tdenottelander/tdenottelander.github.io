@@ -3,15 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { IntroductionComponent } from './introduction/introduction.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { ProjectCardComponent } from './project-card/project-card.component';
+import { HeaderComponent } from './components/header/header.component';
+import { IntroductionComponent } from './components/introduction/introduction.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { NgIconsModule } from "@ng-icons/core";
 import { faBrandCss3, faBrandHtml5, faBrandLinkedinIn, faBrandGithub } from "@ng-icons/font-awesome/brands";
 import { faSolidArrowRight } from "@ng-icons/font-awesome/solid";
-import { ChipComponent } from './chip/chip.component';
-import { ContactComponent } from './contact/contact.component';
+import { ChipComponent } from './components/chip/chip.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
