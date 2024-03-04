@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {NgIcon, NgIconsModule} from "@ng-icons/core";
 
 export type Technology = {
   name: string
@@ -29,12 +30,26 @@ export const p5jsTechnology: Technology = {
   link: 'https://p5js.org/'
 }
 
+export const unity3DTechnology: Technology = {
+  name: 'Unity3D',
+  icon: 'faBrandUnity',
+  color: '#222222',
+  link: '#'
+}
+
+export const cSharpTechnology: Technology = {
+  name: 'C#',
+  iconImage: 'assets/c-sharp-c.svg',
+  color: '#551191',
+  link: '#',
+}
+
 @Component({
-  selector: 'chip',
-  templateUrl: './chip.component.html',
-  styleUrls: ['./chip.component.scss']
+  selector: 'technology-chip',
+  templateUrl: './technology-chip.component.html',
+  styleUrls: ['./technology-chip.component.scss'],
 })
-export class ChipComponent {
+export class TechnologyChipComponent {
   @Input({required: true}) technology!: Technology
 
   hover: boolean = false

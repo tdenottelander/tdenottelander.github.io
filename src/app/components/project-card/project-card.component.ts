@@ -4,7 +4,7 @@ import { Project } from './project.model'
 @Component({
   selector: 'project-card',
   templateUrl: './project-card.component.html',
-  styleUrls: ['./project-card.component.scss']
+  styleUrls: ['./project-card.component.scss'],
 })
 export class ProjectCardComponent {
 
