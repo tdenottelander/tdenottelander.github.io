@@ -1,19 +1,25 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { IntroductionComponent } from './components/introduction/introduction.component';
-import { ProjectCardComponent } from './components/project-card/project-card.component';
-import { NgIconsModule } from "@ng-icons/core";
-import { faBrandCss3, faBrandHtml5, faBrandLinkedinIn, faBrandGithub, faBrandUnity } from "@ng-icons/font-awesome/brands";
-import { faSolidArrowRight } from "@ng-icons/font-awesome/solid";
-import { TechnologyChipComponent } from './components/technology-chip/technology-chip.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { MondriaanGeneratorPage } from './pages/projects/mondriaan-generator/mondriaan-generator.page';
-import { HomePage } from './pages/homepage/home.page';
-import {ProjectsComponent} from "./components/projects/projects.component";
+import { AppRoutingModule } from './app-routing.module'
+import { AppComponent } from './app.component'
+import { HeaderComponent } from './components/header/header.component'
+import { IntroductionComponent } from './components/introduction/introduction.component'
+import { ProjectCardComponent } from './components/project-card/project-card.component'
+import { NgIconsModule } from '@ng-icons/core'
+import {
+  faBrandCss3,
+  faBrandGithub,
+  faBrandHtml5,
+  faBrandLinkedinIn,
+  faBrandUnity,
+} from '@ng-icons/font-awesome/brands'
+import { faSolidArrowRight } from '@ng-icons/font-awesome/solid'
+import { TechnologyChipComponent } from './components/technology-chip/technology-chip.component'
+import { ContactComponent } from './components/contact/contact.component'
+import { MondriaanGeneratorPage } from './pages/projects/mondriaan-generator/mondriaan-generator.page'
+import { HomePage } from './pages/homepage/home.page'
+import { ProjectsComponent } from './components/projects/projects.component'
 
 @NgModule({
   declarations: [
@@ -42,6 +48,6 @@ import {ProjectsComponent} from "./components/projects/projects.component";
     }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
