@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core'
-import { RouterModule, Routes } from '@angular/router'
+import { RouterModule, type Routes } from '@angular/router'
 import { MondriaanGeneratorPage } from './pages/projects/mondriaan-generator/mondriaan-generator.page'
 import { HomePage } from './pages/homepage/home.page'
 

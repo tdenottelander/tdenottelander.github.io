@@ -44,13 +44,13 @@ export const cSharpTechnology: Technology = {
 }
 
 @Component({
-  selector: 'technology-chip',
+  selector: 'app-technology-chip',
   templateUrl: './technology-chip.component.html',
   styleUrls: ['./technology-chip.component.scss'],
 })
 export class TechnologyChipComponent {
   @Input({ required: true }) technology!: Technology
 
-  hover: boolean = false
+  hover = false
 }
 

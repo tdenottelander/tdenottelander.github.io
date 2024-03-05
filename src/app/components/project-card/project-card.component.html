@@ -20,7 +20,7 @@
       *ngIf="project.technologies?.length"
       class="technologies-container"
     >
-      <technology-chip
+      <app-technology-chip
         *ngFor="let technology of project.technologies"
         [technology]="technology"/>
     </div>

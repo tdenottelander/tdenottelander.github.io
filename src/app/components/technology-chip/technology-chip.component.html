@@ -16,7 +16,8 @@
       name="{{ technology.icon }}"/>
     <img
       *ngIf="technology.iconImage"
-      [src]="technology.iconImage"/>
+      [src]="technology.iconImage"
+      alt="{{ technology.name }}"/>
     <span>{{ technology.name }}</span>
   </div>
 </a>
