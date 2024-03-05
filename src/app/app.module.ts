@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { HeaderComponent } from './components/header/header.component'
 import { IntroductionComponent } from './components/introduction/introduction.component'
-import { ProjectCardComponent } from './components/project-card/project-card.component'
 import { NgIconsModule } from '@ng-icons/core'
 import {
   faBrandCss3,
@@ -15,11 +14,14 @@ import {
   faBrandUnity,
 } from '@ng-icons/font-awesome/brands'
 import { faSolidArrowRight } from '@ng-icons/font-awesome/solid'
-import { TechnologyChipComponent } from './components/technology-chip/technology-chip.component'
 import { ContactComponent } from './components/contact/contact.component'
 import { MondriaanGeneratorPage } from './pages/projects/mondriaan-generator/mondriaan-generator.page'
 import { HomePage } from './pages/homepage/home.page'
-import { ProjectsComponent } from './components/projects/projects.component'
+import { ProjectFilterComponent } from './components/projects/project-filter/project-filter.component'
+import { ProjectsListComponent } from './components/projects/projects-list/projects-list.component'
+import { TechnologyChipComponent } from './components/projects/technology-chip/technology-chip.component'
+import { ProjectCardComponent } from './components/projects/project-card/project-card.component';
+import { TechnologyFilterComponent } from './components/projects/technology-filter/technology-filter.component'
 
 @NgModule({
   declarations: [
@@ -27,10 +29,12 @@ import { ProjectsComponent } from './components/projects/projects.component'
     // Components
     HeaderComponent,
     IntroductionComponent,
-    ProjectsComponent,
+    ProjectsListComponent,
     ProjectCardComponent,
     ContactComponent,
     TechnologyChipComponent,
+    ProjectFilterComponent,
+    TechnologyFilterComponent,
     // Pages
     HomePage,
     MondriaanGeneratorPage,

@@ -1,0 +1,16 @@
+.filter {
+  margin-bottom: 0.5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.filter-label {
+  font-weight: 300;
+  color: var(--light-grey)
+}

@@ -1,0 +1,10 @@
+<div class="container">
+  <span class="filter-label">Filter: </span>
+  <app-technology-filter
+    *ngFor="let technology of technologies"
+    [technology]="technology"
+    [selected]="isSelected(technology)"
+    (click)="onFilterClick(technology)"
+  />
+</div>
+

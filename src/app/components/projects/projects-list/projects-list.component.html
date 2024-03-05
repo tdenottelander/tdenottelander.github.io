@@ -1,0 +1,17 @@
+<h2>
+  Projects
+</h2>
+
+<div class="filter">
+  <app-project-filter
+    [techProjects]="projects"
+    (technologyFilterChanged)="onTechnologyFilterChanged($event)"
+  />
+</div>
+
+
+<div class="container">
+  <app-project-card
+    *ngFor="let project of visibleProjects"
+    [project]="project"/>
+</div>

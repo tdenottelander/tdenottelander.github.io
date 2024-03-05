@@ -1,0 +1,18 @@
+<div
+  class="container"
+  [ngStyle]="{
+      'border-color': technology.color,
+      'color': (hover || selected) ? 'white' : technology.color,
+      'background-color': (hover || selected) ? technology.color : ''
+    }"
+  (mouseover)="hover = true"
+  (mouseout)="hover = false">
+  <ng-icon
+    *ngIf="technology.icon"
+    name="{{ technology.icon }}"/>
+  <img
+    *ngIf="technology.iconImage"
+    [src]="technology.iconImage"
+    alt="{{ technology.name }}"/>
+  <span>{{ technology.name }}</span>
+</div>

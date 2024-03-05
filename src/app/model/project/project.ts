@@ -1,13 +1,7 @@
-import { Component } from '@angular/core'
-import { Project } from '../project-card/project.model'
-import {
-  cSharpTechnology,
-  htmlTechnology,
-  p5jsTechnology,
-  unity3DTechnology,
-} from '../technology-chip/technology-chip.component'
+import { Project } from './project.model'
+import { cSharpTechnology, htmlTechnology, p5jsTechnology, unity3DTechnology } from '../technology/technology'
 
-const techProjects: Project[] = [
+export const techProjects: Project[] = [
   {
     name: 'Stylish code generation',
     description: 'A p5.js-based program that generates a stylish representation of some code snippets. Never generates the same code twice.',
@@ -33,13 +27,3 @@ const techProjects: Project[] = [
     year: 2017,
   },
 ]
-
-@Component({
-  selector: 'app-projects',
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss'],
-})
-export class ProjectsComponent {
-
-  readonly projects: Project[] = techProjects
-}

@@ -1,4 +1,4 @@
-import { Technology } from '../technology-chip/technology-chip.component'
+import { Technology } from '../technology/technology.model'
 
 export type Project = {
   name: string
