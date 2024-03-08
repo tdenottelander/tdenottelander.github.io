@@ -1,0 +1,23 @@
+h2 {
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  margin-bottom: var(--spacing);
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--spacing);
+
+  app-print-card {
+    flex-basis: 100%;
+    @media(min-width: 330px) {
+      flex-basis: calc((100% - var(--spacing)) / 2);
+    }
+    @media(min-width: 600px) {
+      flex-basis: calc((100% - 2 * var(--spacing)) / 3);
+    }
+  }
+}
