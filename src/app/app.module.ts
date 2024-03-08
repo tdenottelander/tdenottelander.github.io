@@ -20,8 +20,10 @@ import { HomePage } from './pages/homepage/home.page'
 import { ProjectFilterComponent } from './components/projects/project-filter/project-filter.component'
 import { ProjectsListComponent } from './components/projects/projects-list/projects-list.component'
 import { TechnologyChipComponent } from './components/projects/technology-chip/technology-chip.component'
-import { ProjectCardComponent } from './components/projects/project-card/project-card.component';
+import { ProjectCardComponent } from './components/projects/project-card/project-card.component'
 import { TechnologyFilterComponent } from './components/projects/technology-filter/technology-filter.component'
+import { PrintCardComponent } from './components/3dprints/print-card/print-card.component'
+import { PrintsListComponent } from './components/3dprints/prints-list/prints-list.component'
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { TechnologyFilterComponent } from './components/projects/technology-filt
     TechnologyChipComponent,
     ProjectFilterComponent,
     TechnologyFilterComponent,
+    PrintsListComponent,
+    PrintCardComponent,
     // Pages
     HomePage,
     MondriaanGeneratorPage,
