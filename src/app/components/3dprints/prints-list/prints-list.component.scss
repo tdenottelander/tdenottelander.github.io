@@ -2,9 +2,12 @@ h2 {
   text-align: center;
 }
 
+.description {
+  text-align: center;
+}
+
 .container {
   width: 100%;
-  margin-bottom: var(--spacing);
 
   display: flex;
   flex-direction: row;

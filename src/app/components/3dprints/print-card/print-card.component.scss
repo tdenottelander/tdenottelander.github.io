@@ -23,12 +23,7 @@
     }
   }
 
-  p.heading {
-    margin: 0;
-    font-weight: 500;
-    color: var(--dark-grey);
-    text-decoration: underline var(--accent);
-    align-self: center;
-    font-size: 0.875rem;
+  .title {
+    text-align: center;
   }
 }

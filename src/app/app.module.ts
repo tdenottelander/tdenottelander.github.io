@@ -24,6 +24,9 @@ import { ProjectCardComponent } from './components/projects/project-card/project
 import { TechnologyFilterComponent } from './components/projects/technology-filter/technology-filter.component'
 import { PrintCardComponent } from './components/3dprints/print-card/print-card.component'
 import { PrintsListComponent } from './components/3dprints/prints-list/prints-list.component'
+import { VideosListComponent } from './components/videos/videos-list/videos-list.component'
+import { VideoCardComponent } from './components/videos/video-card/video-card.component'
+import { CardComponent } from './components/card/card.component'
 
 @NgModule({
   declarations: [
@@ -31,6 +34,7 @@ import { PrintsListComponent } from './components/3dprints/prints-list/prints-li
     // Components
     HeaderComponent,
     IntroductionComponent,
+    CardComponent,
     ProjectsListComponent,
     ProjectCardComponent,
     ContactComponent,
@@ -39,6 +43,8 @@ import { PrintsListComponent } from './components/3dprints/prints-list/prints-li
     TechnologyFilterComponent,
     PrintsListComponent,
     PrintCardComponent,
+    VideosListComponent,
+    VideoCardComponent,
     // Pages
     HomePage,
     MondriaanGeneratorPage,

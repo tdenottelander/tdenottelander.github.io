@@ -1,0 +1,16 @@
+<app-card>
+  <div class="container">
+    <iframe
+      [src]="safeUrl"
+      title="{{ video.name }}"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+
+    <p class="info">
+      <span class="title">{{ video.name }}</span>
+      <span class="year" *ngIf="video.year"> {{ video.year }}</span>
+    </p>
+  </div>
+</app-card>
