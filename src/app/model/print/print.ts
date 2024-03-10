@@ -6,7 +6,7 @@ export const prints: Print[] = [
     imagePath: 'assets/3dprints/MonkeyLightStill.gif',
   },
   {
-    name: 'Santa Clause',
+    name: 'Santa Claus',
     imagePath: 'assets/3dprints/Santa-800x800.png',
   },
   {

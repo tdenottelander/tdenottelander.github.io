@@ -1,12 +1,12 @@
-<h2>
+<h2 class="text-center">
   Aerial videos
 </h2>
 
-<p class="description">
+<p class="mb-4 text-center">
   I like to shoot aerial videos with the DJI Mavic Mini, see below for my productions.
 </p>
 
-<div class="container">
+<div class="w-full flex flex-col gap-4">
   <app-video-card
     *ngFor="let video of videos"
     [video]="video"/>

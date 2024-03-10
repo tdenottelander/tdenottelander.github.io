@@ -5,19 +5,22 @@
   (mouseout)="hover = false"
 >
   <div
-    class="container"
+    class="py-0.5 px-1.5 rounded-full border text-xs"
     [ngStyle]="{
       'border-color': technology.color,
       'color': hover ? 'white' : technology.color,
       'background-color': hover ? technology.color : ''
     }">
-    <ng-icon
-      *ngIf="technology.icon"
-      name="{{ technology.icon }}"/>
-    <img
-      *ngIf="technology.iconImage"
-      [src]="technology.iconImage"
-      alt="{{ technology.name }}"/>
-    <span>{{ technology.name }}</span>
+    <div class="flex justify-center items-center gap-1">
+      <ng-icon
+        *ngIf="technology.icon"
+        name="{{ technology.icon }}"/>
+      <img
+        *ngIf="technology.iconImage"
+        [src]="technology.iconImage"
+        alt="{{ technology.name }}"
+        class="h-3.5 w-3.5"/>
+      <span>{{ technology.name }}</span>
+    </div>
   </div>
 </a>

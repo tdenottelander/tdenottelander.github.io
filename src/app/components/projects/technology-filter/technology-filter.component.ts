@@ -4,7 +4,6 @@ import { Technology } from '../../../model/technology/technology.model'
 @Component({
   selector: 'app-technology-filter',
   templateUrl: './technology-filter.component.html',
-  styleUrls: ['./technology-filter.component.scss'],
 })
 export class TechnologyFilterComponent {
 

@@ -1,34 +1,40 @@
-<div class="card">
-  <!--  Image of the project-card-->
-  <div class="image-container">
-    <img src="{{ project.image }}" alt="{{ project.name }}" class="image">
-  </div>
+<div class="my-card p-4 bg-white rounded-lg shadow">
+  <div class="flex flex-row gap-4 justify-center items-stretch">
+    <!--  Image of the project-card-->
+    <div class="flex-none">
+      <img
+        src="{{ project.image }}"
+        alt="{{ project.name }}"
+        class="image object-cover overflow-hidden h-24 w-24 rounded">
+    </div>
 
-  <div class="info-container">
-    <p>
-      <span class="heading">
+    <div class="flex-grow">
+      <p>
+      <span class="mr-2 mb-2 font-medium accent-gray-700 underline decoration-2 decoration-accent">
         {{ project.name }}
       </span>
-      <span class="year">
+        <span class="year text-sm">
         {{ project.year }}
       </span>
-    </p>
-    <p>{{ project.description }}</p>
+      </p>
+      <p>{{ project.description }}</p>
 
-    <!--  Technologies used in the project -->
-    <div
-      *ngIf="project.technologies?.length"
-      class="technologies-container"
-    >
-      <app-technology-chip
-        *ngFor="let technology of project.technologies"
-        [technology]="technology"
-      />
+      <!--  Technologies used in the project -->
+      <div
+        *ngIf="project.technologies?.length"
+        class="mt-2 flex gap-2 flex-wrap"
+      >
+        <app-technology-chip
+          *ngFor="let technology of project.technologies"
+          [technology]="technology"
+        />
+      </div>
     </div>
+
+    <!--  Link to the project -->
+    <a href="{{ project.link }}" class="cursor-pointer hidden sm:flex flex-none items-center">
+      <ng-icon name="faSolidArrowRight" class="mx-auto my-4 text-2xl text-gray-500"/>
+    </a>
   </div>
 
-  <!--  Link to the project -->
-  <a href="{{ project.link }}" class="view-project-container">
-    <ng-icon name="faSolidArrowRight" class="icon"/>
-  </a>
 </div>

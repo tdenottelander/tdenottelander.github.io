@@ -1,9 +1,12 @@
-<div class="card">
-  <div class="image-container">
-    <img src="{{ print.imagePath }}" alt="{{ print.name }}" class="image">
-  </div>
+<div class="card p-4 bg-white rounded-lg shadow">
+  <div class="flex flex-col gap-2">
+    <img
+      src="{{ print.imagePath }}"
+      alt="{{ print.name }}"
+      class="rounded w-full h-auto object-cover overflow-hidden">
 
-  <p class="title">
-    {{ print.name }}
-  </p>
+    <p class="title text-center">
+      {{ print.name }}
+    </p>
+  </div>
 </div>
