@@ -1,15 +1,19 @@
-<h2>
+<h2 class="text-center">
   3D-prints
 </h2>
 
-<p class="description mb-4">
+<p class="mb-4 text-center">
   In my spare time I like to create 3D-printed and painted figurines.
   I use a Creality CR10S-Pro to make prints and use acrylic paints to finish them off.
   See the gallery below for some of my creations.
 </p>
 
-<div class="container">
+<div class="my-container flex flex-row flex-wrap gap-4">
   <app-print-card
     *ngFor="let print of prints"
-    [print]="print"/>
+    [print]="print"
+    class="
+      basis-full
+      min-[320px]:basis-[calc((100%-1rem)/2)]
+      sm:basis-[calc((100%-2rem)/3)]"/>
 </div>

@@ -6,7 +6,6 @@ import { Technology } from '../../../model/technology/technology.model'
 @Component({
   selector: 'app-projects-list',
   templateUrl: './projects-list.component.html',
-  styleUrls: ['./projects-list.component.scss'],
 })
 export class ProjectsListComponent {
 

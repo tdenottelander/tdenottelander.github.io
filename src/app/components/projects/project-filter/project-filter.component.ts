@@ -5,7 +5,6 @@ import { Technology } from '../../../model/technology/technology.model'
 @Component({
   selector: 'app-project-filter',
   templateUrl: './project-filter.component.html',
-  styleUrls: ['./project-filter.component.scss'],
 })
 export class ProjectFilterComponent implements OnInit {
 
