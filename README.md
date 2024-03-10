@@ -17,6 +17,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Deployment to github pages
 
 - Checkout the `gh-pages` branch
-- Run `ng build --base-href /tdenottelander/`
+- Run `npm run deploy`
 - Commit and push!
 
