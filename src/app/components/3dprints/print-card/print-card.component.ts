@@ -7,6 +7,5 @@ import { Print } from '../../../model/print/print.model'
   standalone: true,
 })
 export class PrintCardComponent {
-
   @Input({ required: true }) print!: Print
 }

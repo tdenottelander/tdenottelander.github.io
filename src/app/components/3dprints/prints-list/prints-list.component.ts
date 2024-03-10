@@ -11,6 +11,5 @@ import { NgFor } from '@angular/common'
   imports: [NgFor, PrintCardComponent],
 })
 export class PrintsListComponent {
-
   readonly prints: Print[] = prints
 }

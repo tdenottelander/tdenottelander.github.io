@@ -9,7 +9,6 @@ import { NgFor } from '@angular/common'
   imports: [NgFor, NgIcon],
 })
 export class ContactComponent {
-
   links = [
     {
       url: 'https://www.linkedin.com/in/tdenottelander/',

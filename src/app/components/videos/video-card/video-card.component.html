@@ -11,7 +11,12 @@
 
     <p class="text-sm text-center">
       <span class="title">{{ video.name }}</span>
-      <span class="year" *ngIf="video.year"> {{ video.year }}</span>
+      <span
+        class="year"
+        *ngIf="video.year"
+      >
+        {{ video.year }}</span
+      >
     </p>
   </div>
 </app-card>

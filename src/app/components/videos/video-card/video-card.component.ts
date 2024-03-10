@@ -11,14 +11,15 @@ import { CardComponent } from '../../card/card.component'
   imports: [CardComponent, NgIf],
 })
 export class VideoCardComponent implements OnInit {
-
   @Input({ required: true }) video!: Video
 
   safeUrl?: SafeResourceUrl
 
-  constructor (private readonly domSanitizer: DomSanitizer) {}
+  constructor(private readonly domSanitizer: DomSanitizer) {}
 
-  ngOnInit (): void {
-    this.safeUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(this.video.url)
+  ngOnInit(): void {
+    this.safeUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(
+      this.video.url,
+    )
   }
 }

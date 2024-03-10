@@ -15,7 +15,4 @@ import { IntroductionComponent } from '../../components/introduction/introductio
     VideosListComponent,
   ],
 })
-export class HomePage {
-
-}
-
+export class HomePage {}

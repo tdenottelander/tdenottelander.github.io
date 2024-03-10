@@ -1,22 +1,24 @@
 <div
   class="py-0.5 px-1.5 rounded-full border text-xs cursor-pointer"
   [ngStyle]="{
-      'border-color': technology.color,
-      'color': hover ? 'white' : technology.color,
-      'background-color': hover ? technology.color : ''
-    }"
+    'border-color': technology.color,
+    color: hover ? 'white' : technology.color,
+    'background-color': hover ? technology.color : ''
+  }"
   (mouseover)="hover = true"
   (mouseout)="hover = false"
-  >
+>
   <div class="flex justify-center items-center gap-1">
     <ng-icon
       *ngIf="technology.icon"
-      name="{{ technology.icon }}"/>
+      name="{{ technology.icon }}"
+    />
     <img
       *ngIf="technology.iconImage"
       [src]="technology.iconImage"
       alt="{{ technology.name }}"
-      class="h-3.5 w-3.5"/>
+      class="h-3.5 w-3.5"
+    />
     <span>{{ technology.name }}</span>
   </div>
 </div>

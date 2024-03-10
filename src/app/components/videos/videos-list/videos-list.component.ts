@@ -11,6 +11,5 @@ import { NgFor } from '@angular/common'
   imports: [NgFor, VideoCardComponent],
 })
 export class VideosListComponent {
-
   readonly videos: Video[] = videos
 }

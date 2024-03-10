@@ -5,17 +5,20 @@
       <img
         src="{{ project.image }}"
         alt="{{ project.name }}"
-        class="image object-cover overflow-hidden h-24 w-24 rounded">
+        class="image object-cover overflow-hidden h-24 w-24 rounded"
+      />
     </div>
 
     <div class="flex-grow">
       <p>
-      <span class="mr-2 mb-2 font-medium accent-gray-700 underline decoration-2 decoration-accent">
-        {{ project.name }}
-      </span>
+        <span
+          class="mr-2 mb-2 font-medium accent-gray-700 underline decoration-2 decoration-accent"
+        >
+          {{ project.name }}
+        </span>
         <span class="year text-sm">
-        {{ project.year }}
-      </span>
+          {{ project.year }}
+        </span>
       </p>
       <p>{{ project.description }}</p>
 
@@ -32,9 +35,14 @@
     </div>
 
     <!--  Link to the project -->
-    <a href="{{ project.link }}" class="cursor-pointer hidden sm:flex flex-none items-center">
-      <ng-icon name="faSolidArrowRight" class="mx-auto my-4 text-2xl text-gray-500"/>
+    <a
+      href="{{ project.link }}"
+      class="cursor-pointer hidden sm:flex flex-none items-center"
+    >
+      <ng-icon
+        name="faSolidArrowRight"
+        class="mx-auto my-4 text-2xl text-gray-500"
+      />
     </a>
   </div>
-
 </div>

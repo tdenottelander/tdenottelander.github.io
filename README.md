@@ -20,3 +20,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 - Run `npm run deploy`
 - Commit and push!
 
+## Format all files
+
+To format all files according to the Prettier configuration, run `npm run format`

@@ -8,15 +8,8 @@ import { NgFor, NgIf } from '@angular/common'
   selector: 'app-project-card',
   templateUrl: './project-card.component.html',
   standalone: true,
-  imports: [
-    NgIf,
-    NgFor,
-    TechnologyChipComponent,
-    NgIcon,
-  ],
+  imports: [NgIf, NgFor, TechnologyChipComponent, NgIcon],
 })
 export class ProjectCardComponent {
-
   @Input({ required: true }) project!: Project
-
 }

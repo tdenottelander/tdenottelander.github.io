@@ -6,7 +6,4 @@ import { Component } from '@angular/core'
   styleUrls: ['./mondriaan-generator.page.scss'],
   standalone: true,
 })
-export class MondriaanGeneratorPage {
-
-}
-
+export class MondriaanGeneratorPage {}

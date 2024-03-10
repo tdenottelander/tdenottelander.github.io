@@ -7,14 +7,9 @@ import { NgIf, NgStyle } from '@angular/common'
   selector: 'app-technology-filter',
   templateUrl: './technology-filter.component.html',
   standalone: true,
-  imports: [
-    NgStyle,
-    NgIf,
-    NgIcon,
-  ],
+  imports: [NgStyle, NgIf, NgIcon],
 })
 export class TechnologyFilterComponent {
-
   @Input({ required: true }) technology!: Technology
   @Input({ required: true }) selected!: boolean
 

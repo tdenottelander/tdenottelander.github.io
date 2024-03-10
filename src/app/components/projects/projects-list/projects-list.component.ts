@@ -10,14 +10,9 @@ import { ProjectFilterComponent } from '../project-filter/project-filter.compone
   selector: 'app-projects-list',
   templateUrl: './projects-list.component.html',
   standalone: true,
-  imports: [
-    ProjectFilterComponent,
-    NgFor,
-    ProjectCardComponent,
-  ],
+  imports: [ProjectFilterComponent, NgFor, ProjectCardComponent],
 })
 export class ProjectsListComponent {
-
   readonly projects: Project[] = techProjects
 
   visibleProjects: Project[] = [...this.projects]
@@ -27,8 +22,12 @@ export class ProjectsListComponent {
       this.visibleProjects = [...this.projects]
       return
     }
-    this.visibleProjects = [...this.projects.filter((project) => {
-      return project.technologies?.some((technology) => technologies.includes(technology))
-    })]
+    this.visibleProjects = [
+      ...this.projects.filter((project) => {
+        return project.technologies?.some((technology) =>
+          technologies.includes(technology),
+        )
+      }),
+    ]
   }
 }

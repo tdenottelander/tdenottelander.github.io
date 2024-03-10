@@ -7,15 +7,10 @@ import { NgIf, NgStyle } from '@angular/common'
   selector: 'app-technology-chip',
   templateUrl: './technology-chip.component.html',
   standalone: true,
-  imports: [
-    NgStyle,
-    NgIf,
-    NgIcon,
-  ],
+  imports: [NgStyle, NgIf, NgIcon],
 })
 export class TechnologyChipComponent {
   @Input({ required: true }) technology!: Technology
 
   hover = false
 }
-
