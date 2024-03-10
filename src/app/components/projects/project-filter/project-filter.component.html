@@ -1,7 +1,5 @@
-<div class="flex flex-row flex-wrap justify-center items-center gap-2">
-  <span
-    class="filter-label font-light text-gray-400"
-  >Filter: </span>
+<div class="flex flex-row flex-wrap items-center justify-center gap-2">
+  <span class="filter-label font-light text-gray-400">Filter: </span>
   <app-technology-filter
     *ngFor="let technology of technologies"
     [technology]="technology"
@@ -9,4 +7,3 @@
     (click)="onFilterClick(technology)"
   />
 </div>
-

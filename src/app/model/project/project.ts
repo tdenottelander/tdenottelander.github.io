@@ -1,10 +1,16 @@
 import { Project } from './project.model'
-import { cSharpTechnology, htmlTechnology, p5jsTechnology, unity3DTechnology } from '../technology/technology'
+import {
+  cSharpTechnology,
+  htmlTechnology,
+  p5jsTechnology,
+  unity3DTechnology,
+} from '../technology/technology'
 
 export const techProjects: Project[] = [
   {
     name: 'Stylish code generation',
-    description: 'A p5.js-based program that generates a stylish representation of some code snippets. Never generates the same code twice.',
+    description:
+      'A p5.js-based program that generates a stylish representation of some code snippets. Never generates the same code twice.',
     image: 'assets/StylishCodeGenerationThumbnail.gif',
     link: '#',
     technologies: [htmlTechnology, p5jsTechnology],
@@ -12,7 +18,8 @@ export const techProjects: Project[] = [
   },
   {
     name: 'Mondriaan generator',
-    description: 'A tribute to the Dutch painter Piet Mondriaan, which is seen as a pioneer of the abstract arts in the 20th century. This generator creates paintings that resemble Mondriaan\'s works according to some rules, color schemes and probabilities.',
+    description:
+      "A tribute to the Dutch painter Piet Mondriaan, which is seen as a pioneer of the abstract arts in the 20th century. This generator creates paintings that resemble Mondriaan's works according to some rules, color schemes and probabilities.",
     image: 'assets/MondriaanGeneratorThumbnail.png',
     link: '/projects/mondriaan-generator',
     technologies: [htmlTechnology, p5jsTechnology],

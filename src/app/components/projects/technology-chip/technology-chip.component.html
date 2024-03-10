@@ -1,25 +1,28 @@
 <a
-  href="{{technology.link}}"
+  href="{{ technology.link }}"
   target="_blank"
   (mouseover)="hover = true"
   (mouseout)="hover = false"
 >
   <div
-    class="py-0.5 px-1.5 rounded-full border text-xs"
+    class="rounded-full border px-1.5 py-0.5 text-xs"
     [ngStyle]="{
       'border-color': technology.color,
-      'color': hover ? 'white' : technology.color,
+      color: hover ? 'white' : technology.color,
       'background-color': hover ? technology.color : ''
-    }">
-    <div class="flex justify-center items-center gap-1">
+    }"
+  >
+    <div class="flex items-center justify-center gap-1">
       <ng-icon
         *ngIf="technology.icon"
-        name="{{ technology.icon }}"/>
+        name="{{ technology.icon }}"
+      />
       <img
         *ngIf="technology.iconImage"
         [src]="technology.iconImage"
         alt="{{ technology.name }}"
-        class="h-3.5 w-3.5"/>
+        class="h-3.5 w-3.5"
+      />
       <span>{{ technology.name }}</span>
     </div>
   </div>

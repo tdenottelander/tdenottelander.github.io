@@ -29,8 +29,18 @@ import { VideoCardComponent } from './components/videos/video-card/video-card.co
 import { CardComponent } from './components/card/card.component'
 
 @NgModule({
-  declarations: [
-    AppComponent,
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgIconsModule.withIcons({
+      faSolidArrowRight,
+      faBrandHtml5,
+      faBrandCss3,
+      faBrandLinkedinIn,
+      faBrandGithub,
+      faBrandUnity,
+    }),
     // Components
     HeaderComponent,
     IntroductionComponent,
@@ -48,18 +58,6 @@ import { CardComponent } from './components/card/card.component'
     // Pages
     HomePage,
     MondriaanGeneratorPage,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgIconsModule.withIcons({
-      faSolidArrowRight,
-      faBrandHtml5,
-      faBrandCss3,
-      faBrandLinkedinIn,
-      faBrandGithub,
-      faBrandUnity,
-    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
