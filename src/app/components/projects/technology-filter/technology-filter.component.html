@@ -1,5 +1,5 @@
 <div
-  class="py-0.5 px-1.5 rounded-full border text-xs cursor-pointer"
+  class="cursor-pointer rounded-full border px-1.5 py-0.5 text-xs"
   [ngStyle]="{
     'border-color': technology.color,
     color: hover ? 'white' : technology.color,
@@ -8,7 +8,7 @@
   (mouseover)="hover = true"
   (mouseout)="hover = false"
 >
-  <div class="flex justify-center items-center gap-1">
+  <div class="flex items-center justify-center gap-1">
     <ng-icon
       *ngIf="technology.icon"
       name="{{ technology.icon }}"
