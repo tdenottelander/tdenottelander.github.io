@@ -1,10 +1,14 @@
 import { Component, Input, OnInit } from '@angular/core'
 import { Video } from '../../../model/video/video.model'
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser'
+import { NgIf } from '@angular/common'
+import { CardComponent } from '../../card/card.component'
 
 @Component({
   selector: 'app-video-card',
   templateUrl: './video-card.component.html',
+  standalone: true,
+  imports: [CardComponent, NgIf],
 })
 export class VideoCardComponent implements OnInit {
 

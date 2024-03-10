@@ -2,10 +2,19 @@ import { Component } from '@angular/core'
 import { Project } from '../../../model/project/project.model'
 import { techProjects } from '../../../model/project/project'
 import { Technology } from '../../../model/technology/technology.model'
+import { ProjectCardComponent } from '../project-card/project-card.component'
+import { NgFor } from '@angular/common'
+import { ProjectFilterComponent } from '../project-filter/project-filter.component'
 
 @Component({
   selector: 'app-projects-list',
   templateUrl: './projects-list.component.html',
+  standalone: true,
+  imports: [
+    ProjectFilterComponent,
+    NgFor,
+    ProjectCardComponent,
+  ],
 })
 export class ProjectsListComponent {
 
@@ -14,7 +23,7 @@ export class ProjectsListComponent {
   visibleProjects: Project[] = [...this.projects]
 
   readonly onTechnologyFilterChanged = (technologies: Technology[]) => {
-    if(technologies.length === 0) {
+    if (technologies.length === 0) {
       this.visibleProjects = [...this.projects]
       return
     }
