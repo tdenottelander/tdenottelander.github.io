@@ -12,7 +12,7 @@ export const techProjects: Project[] = [
     description:
       'A p5.js-based program that generates a stylish representation of some code snippets. Never generates the same code twice.',
     image: 'assets/StylishCodeGenerationThumbnail.gif',
-    link: '#',
+    link: '/stylish-code-generation',
     technologies: [htmlTechnology, p5jsTechnology],
     year: 2020,
   },
@@ -21,7 +21,7 @@ export const techProjects: Project[] = [
     description:
       "A tribute to the Dutch painter Piet Mondriaan, which is seen as a pioneer of the abstract arts in the 20th century. This generator creates paintings that resemble Mondriaan's works according to some rules, color schemes and probabilities.",
     image: 'assets/MondriaanGeneratorThumbnail.png',
-    link: '/projects/mondriaan-generator',
+    link: '/mondriaan-generator',
     technologies: [htmlTechnology, p5jsTechnology],
     year: 2019,
   },

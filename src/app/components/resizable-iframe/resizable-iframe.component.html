@@ -1,0 +1,26 @@
+
+<ng-container *ngIf="pending">
+  <div class="my-16">
+    <app-loader/>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="!pending">
+
+  <ng-container *ngIf="safeHtml">
+    <iframe
+      *ngIf="safeHtml"
+      appIframeResizer
+      class="w-full"
+      [srcdoc]="safeHtml"
+      [title]="title"
+    ></iframe>
+  </ng-container>
+
+  <ng-container *ngIf="!safeHtml">
+    <p class="text-center">Something went wrong while loading the project...</p>
+  </ng-container>
+
+</ng-container>
+
+
