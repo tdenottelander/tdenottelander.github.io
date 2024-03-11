@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script src="assets/js/iframeResizer.contentWindow.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.1/lib/p5.min.js"></script>
+  <script
+    src="https://web.archive.org/web/20210123113425js_/https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+  <script>
+    var rounding = 4;
+    var lineHeight = 20;
+    var waitAfterCompletionSeconds = 3;
+
+    class Code {
+
+      constructor () {
+        this.linecount = 0;
+        this.indentBase = 20;
+        this.indentWidth = 20;
+        this.keywordSpacing = 5;
+        this.colorWheel = [
+          color(77, 139, 240),
+          color(242, 206, 75),
+          color(237, 160, 66),
+          color(173, 173, 173),
+          color(173, 173, 173),
+          color(173, 173, 173)
+        ];
+        // this.importKeywordColor = this.getRandColor()
+        this.importKeywordColor = color(255, 255, 255);
+        this.importColor = this.getRandColor();
+        this.commentColor = color(103, 181, 109); //this.getRandColor()
+        this.rounding = 4;
+        // this.opacityReductionThreshold = 400
+        // this.opacityReduction = 40
+        this.opacity = 255;
+        this.elements = [];
+        this.elementCounter = 0;
+        this.opacityCounter = 0;
+        this.waitAfterCompletionFrames = waitAfterCompletionSeconds * framerate;
+      }
+
+      draw () {
+        if (this.elementCounter >= this.elements.length + this.waitAfterCompletionFrames) {
+          this.reset();
+          this.generate();
+          this.elementCounter = 0;
+          return;
+        } else if (this.elementCounter < this.elements.length) {
+          this.elements[this.elementCounter].draw();
+          this.opacityCounter += 1;
+          if (this.opacityCounter >= 5) {
+            this.elementCounter += 1;
+            this.opacityCounter = 0;
+          }
+        } else {
+          this.elementCounter += 1;
+        }
+      }
+
+      reset () {
+        this.linecount = 0;
+        this.elements = [];
+        this.opacity = 255;
+        clear();
+        background(color(30, 30, 30));
+      }
+
+      generate () {
+        this.generateImports();
+        this.generateBlocks();
+      }
+
+      generateImports () {
+        var numImports = rand(1, 5);
+        var importKeywordWidth = rand(20, 50);
+        for (var i = 0; i < numImports; i++) {
+          var x = this.indentBase;
+          this.elements.push(new Keyword(x, this.linecount, importKeywordWidth, this.importKeywordColor));
+          x += importKeywordWidth + this.keywordSpacing;
+          this.elements.push(new Keyword(x, this.linecount, rand(20, 80), this.importKeywordColor));
+          this.linecount += lineHeight;
+        }
+        this.linecount += lineHeight;
+      }
+
+      generateBlocks () {
+        var numBlocks = rand(4, 6);
+        for (var i = 0; i < numBlocks; i++) {
+          this.generateBlock();
+        }
+      }
+
+      generateBlock () {
+        this.generateDocumentation();
+        var numLines = rand(2, 8);
+        var indent = 0;
+        for (var i = 0; i < numLines; i++) {
+          this.generateLine(this.indentBase + indent * this.indentWidth, this.linecount);
+          indent = max(0, indent + (rand(0, 3) - 1));
+        }
+        this.linecount += lineHeight;
+      }
+
+      generateDocumentation () {
+        var doclines = rand(1, 3);
+        for (var i = 0; i < doclines; i++) {
+          // this.commentColor.setAlpha(this.opacity)
+          this.elements.push(new Keyword(this.indentBase, this.linecount, rand(120, 450), this.commentColor));
+          this.linecount += lineHeight;
+        }
+      }
+
+      generateLine (x, y) {
+        var numKeywords = rand(2, 6);
+        for (var i = 0; i < numKeywords; i++) {
+          var keywordWidth = rand(20, 100);
+          this.elements.push(new Keyword(x, y, keywordWidth, this.getRandColor()));
+          // this.drawKeyword(x, y, keywordWidth, this.getRandColor())
+          x = x + keywordWidth + this.keywordSpacing;
+        }
+        this.linecount += lineHeight;
+        if (y > this.opacityReductionThreshold) {
+          this.opacity -= this.opacityReduction;
+        }
+      }
+
+      getRandColor () {
+        var color = this.colorWheel[rand(0, this.colorWheel.length)];
+        // color.setAlpha(this.opacity)
+        // print(color)
+        return color;
+      }
+    }
+
+    class Keyword {
+      constructor (x, y, width, color) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.color = color;
+      }
+
+      draw () {
+        var col = this.color;
+        col.setAlpha(60);
+        fill(this.color);
+        rect(this.x, this.y, this.width, lineHeight * 0.7, rounding, rounding, rounding, rounding);
+      }
+    }
+  </script>
+  <script> // <reference path="p5.d/p5.global-mode.d.ts"/>
+  var canvas;
+  var code;
+  var framerate = 20;
+
+  // Function to get a random int between min (inclusive) and max (exclusive)
+  function rand (min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+  }
+
+  // p5js setup function
+  function setup () {
+    canvas = createCanvas(500, 800);
+    canvas.parent("canvasContainer");
+    background(color(30, 30, 30));
+    frameRate(framerate);
+    code = new Code();
+    code.generate();
+    code.draw();
+  }
+
+  // p5js draw function
+  function draw () {
+    code.draw();
+  }
+  </script>
+  <style>
+    #canvasContainer {
+      /*background-color: rgb(100, 30, 30);*/
+      display: flex;
+      justify-content: flex-start;
+      width: 100%
+    }
+
+    canvas {
+      margin: 0 auto;
+      padding-top: 1rem;
+      /*padding-left: 1em;*/
+      background-color: rgb(30, 30, 30);
+      max-width: 500px;
+      width: inherit !important;
+      height: inherit !important;
+    }
+  </style>
+</head>
+<body>
+
+
+<div id="canvasContainer" style="width: 100%; height: auto"></div>
+</body>
+</html>
