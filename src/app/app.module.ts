@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { NgIconsModule } from '@ng-icons/core'
 import {
+  faBrandAngular,
   faBrandCss3,
   faBrandGithub,
   faBrandHtml5,
@@ -14,6 +15,7 @@ import {
 import { faSolidArrowRight } from '@ng-icons/font-awesome/solid'
 import { ContactComponent } from './components/contact/contact.component'
 import { HttpClientModule } from '@angular/common/http'
+import { simpleJavascript, simpleTypescript } from '@ng-icons/simple-icons'
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,6 +29,9 @@ import { HttpClientModule } from '@angular/common/http'
       faBrandLinkedinIn,
       faBrandGithub,
       faBrandUnity,
+      faBrandAngular,
+      simpleJavascript,
+      simpleTypescript,
     }),
     ContactComponent,
   ],
