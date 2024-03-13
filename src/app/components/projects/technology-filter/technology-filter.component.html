@@ -2,8 +2,8 @@
   class="cursor-pointer rounded-full border px-1.5 py-0.5 text-xs"
   [ngStyle]="{
     'border-color': technology.color,
-    color: hover ? 'white' : technology.color,
-    'background-color': hover ? technology.color : ''
+    color: (hover || selected) ? 'white' : technology.color,
+    'background-color': (hover || selected) ? technology.color : ''
   }"
   (mouseover)="hover = true"
   (mouseout)="hover = false"
