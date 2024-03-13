@@ -12,6 +12,24 @@ export const cssTechnology: Technology = {
   color: '#1572B6',
   link: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
 }
+export const javascriptTechnology: Technology = {
+  name: 'JavaScript',
+  icon: 'simpleJavascript',
+  color: '#f3c200',
+  link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+}
+export const typescriptTechnology: Technology = {
+  name: 'TypeScript',
+  icon: 'simpleTypescript',
+  color: '#007ACC',
+  link: 'https://www.typescriptlang.org/',
+}
+export const angularTechnology: Technology = {
+  name: 'Angular',
+  icon: 'faBrandAngular',
+  color: '#DD0031',
+  link: 'https://angular.io/',
+}
 export const p5jsTechnology: Technology = {
   name: 'p5.js',
   iconImage: 'assets/P5.js_icon.svg',
