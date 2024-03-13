@@ -11,12 +11,15 @@
     *ngFor="let print of visiblePrints"
     [print]="print"
     class="basis-full min-[320px]:basis-[calc((100%-1rem)/2)] sm:basis-[calc((100%-2rem)/3)]"
+    data-aos="fade-up"
+    data-aos-delay="200"
   />
 </div>
 
 <div
   class="mt-4 flex items-center justify-center gap-4"
   *ngIf="visibleNumber < prints.length"
+  data-aos="fade-up"
 >
   <button
     class="rounded bg-white px-3 py-2 text-sm text-gray-700 shadow"
