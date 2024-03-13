@@ -16,6 +16,7 @@ import { faSolidArrowRight } from '@ng-icons/font-awesome/solid'
 import { ContactComponent } from './components/contact/contact.component'
 import { HttpClientModule } from '@angular/common/http'
 import { simpleJavascript, simpleTypescript } from '@ng-icons/simple-icons'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [AppComponent],
@@ -33,6 +34,7 @@ import { simpleJavascript, simpleTypescript } from '@ng-icons/simple-icons'
       simpleJavascript,
       simpleTypescript,
     }),
+    BrowserAnimationsModule,
     ContactComponent,
   ],
   providers: [importProvidersFrom(HttpClientModule)],
