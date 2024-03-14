@@ -12,9 +12,17 @@
     <div class="flex-grow">
       <p>
         <a
+          *ngIf="!project.externalLink"
           class="mb-2 mr-2 font-medium underline decoration-accent decoration-2 accent-gray-700"
-          routerLink="{{ project.link }}"
+          routerLink="{{ project.routerLink }}"
           routerLinkActive="active"
+        >
+          {{ project.name }}
+        </a>
+        <a
+          *ngIf="project.externalLink"
+          class="mb-2 mr-2 font-medium underline decoration-accent decoration-2 accent-gray-700"
+          href="{{ project.externalLink }}"
         >
           {{ project.name }}
         </a>
@@ -38,9 +46,19 @@
 
     <!--  Link to the project -->
     <a
+      *ngIf="!project.externalLink"
       class="hidden flex-none cursor-pointer items-center sm:flex"
-      routerLink="{{ project.link }}"
-      routerLinkActive="active"
+      [routerLink]="project.routerLink"
+    >
+      <ng-icon
+        name="faSolidArrowRight"
+        class="mx-auto my-4 text-2xl text-gray-500"
+      />
+    </a>
+    <a
+      *ngIf="project.externalLink"
+      class="hidden flex-none cursor-pointer items-center sm:flex"
+      [href]="project.externalLink"
     >
       <ng-icon
         name="faSolidArrowRight"

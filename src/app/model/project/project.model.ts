@@ -4,7 +4,8 @@ export type Project = {
   name: string
   description: string
   image: string
-  link: string
+  routerLink?: string
+  externalLink?: string
   technologies?: Technology[]
   year?: number
 }
