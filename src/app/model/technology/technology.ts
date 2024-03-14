@@ -48,6 +48,18 @@ export const cSharpTechnology: Technology = {
   color: '#551191',
   link: '#',
 }
+export const flutterTechnology: Technology = {
+  name: 'Flutter',
+  icon: 'simpleFlutter',
+  color: '#02569B',
+  link: 'https://flutter.dev/',
+}
+export const dartTechnology: Technology = {
+  name: 'Dart',
+  icon: 'simpleDart',
+  color: '#0175C2',
+  link: 'https://dart.dev/',
+}
 
 export const technologies = [
   htmlTechnology,

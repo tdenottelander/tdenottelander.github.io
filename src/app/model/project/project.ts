@@ -3,6 +3,8 @@ import {
   angularTechnology,
   cSharpTechnology,
   cssTechnology,
+  dartTechnology,
+  flutterTechnology,
   htmlTechnology,
   javascriptTechnology,
   p5jsTechnology,
@@ -50,5 +52,23 @@ export const techProjects: Project[] = [
     routerLink: '#',
     technologies: [unity3DTechnology, cSharpTechnology],
     year: 2017,
+  },
+  {
+    name: 'Catan Buddy',
+    description:
+      'Catan Buddy is an android application that replaces the dice or acts as an additional tool get insight into dice roll statistics. The application is made with Flutter in Android Studio. The application has a SQLite database on the back-end to store game and player statistics.',
+    image: 'assets/CatanBuddyThumbnail.png',
+    routerLink: '#',
+    technologies: [flutterTechnology, dartTechnology],
+    year: 2020,
+  },
+  {
+    name: "Langton's Ant Simulator",
+    description:
+      "A p5.js-based program that simulates Langton's Ant, which is a 2D universal Turing machine with a very simple set of rules, but complex emergent behavior.",
+    image: 'assets/LangtonsAntThumbnail.png',
+    externalLink: 'https://tdenottelander.github.io/Langtons-Ant-Simulator',
+    technologies: [htmlTechnology, javascriptTechnology, p5jsTechnology],
+    year: 2019,
   },
 ]
